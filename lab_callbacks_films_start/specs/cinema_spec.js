@@ -28,7 +28,7 @@ describe('Cinema', function () {
     assert.deepStrictEqual(actual, films);
   });
 
-  xit('should be able to get a list of film titles', function() {
+  it('should be able to get a list of film titles', function() {
 
   const actual = cinema.filmTitles();
   assert.deepStrictEqual(actual, [moonlight.title, bladeRunner.title, dunkirk.title, blackPanther.title, trainspotting.title]);
@@ -37,7 +37,16 @@ describe('Cinema', function () {
   });
 
 
-  xit('should be able to find a film by title');
+  it('should be able to find a film by title', function() {
+
+    const actual = cinema.findTitle('Moonlight');
+    assert.strictEqual(actual, moonlight);
+
+  });
+
+
+
+
   xit('should be able to filter films by genre');
   xit('should be able to check whether there are some films from a particular year');
   xit('should be able to check whether there are no films from a particular year');
